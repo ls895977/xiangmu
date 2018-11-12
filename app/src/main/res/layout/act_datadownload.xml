@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#e8e8e8"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_DataDownload1"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="10dip">
+
+            <TextView
+                android:id="@+id/tv_DataDownload1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@color/white"
+                android:drawablePadding="5dip"
+                android:drawableRight="@drawable/check_selected"
+                android:gravity="center_horizontal"
+                android:text="全部下载" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_DataDownload2"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="10dip">
+
+            <TextView
+                android:id="@+id/tv_DataDownload2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@color/white"
+                android:drawablePadding="5dip"
+                android:drawableRight="@drawable/check_selected"
+                android:gravity="center_horizontal"
+                android:text="上传时间" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_DataDownload3"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="10dip">
+
+            <TextView
+                android:id="@+id/tv_DataDownload3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@color/white"
+                android:drawablePadding="5dip"
+                android:drawableRight="@drawable/check_selected"
+                android:gravity="center_horizontal"
+                android:text="下载次数" />
+        </RelativeLayout>
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/myRecyclerView"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

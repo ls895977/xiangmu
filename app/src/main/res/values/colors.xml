@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="color_font_gray">#9e9d9d</color>
+
+    <color name="button_fouces_gray">#f6f6f6</color>
+    <color name="button_bg_gray">#dddcdc</color>
+
+    <color name="light_red">#f15353</color>
+    <color name="select_light_red">#f03f3f</color>
+
+    <color name="white">#ffffff</color>
+
+    <color name="separator_line">#ffcccccc</color>
+</resources>

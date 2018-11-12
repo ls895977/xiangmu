@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "cn.banband.gaoxinjiaoyu"
+        minSdkVersion 21
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    annotationProcessor "org.androidannotations:androidannotations:4.4.0"
+    implementation 'org.androidannotations:androidannotations-api:4.4.0'
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.loopj.android:android-async-http:1.4.9'
+    implementation 'cz.msebera.android:httpclient:4.3.6'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'org.ligboy.retrofit2:converter-fastjson-android:2.1.0'
+    compile 'com.android.support:recyclerview-v7:27.1.1'
+}

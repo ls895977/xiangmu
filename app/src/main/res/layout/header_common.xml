@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dip"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <RelativeLayout
+        android:id="@+id/header_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="49.0dip"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:paddingBottom="6.0dip"
+        android:paddingTop="6.0dip">
+        <ImageView
+            android:id="@+id/header_title_back_imgv"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="15.0dip"
+            android:paddingRight="15.0dip"
+            android:src="@drawable/common_title_back_selector" />
+
+        <TextView
+            android:id="@+id/header_title_txtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="TextView" />
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:id="@+id/header_title_right"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="15.0dip"
+            android:paddingRight="15.0dip" />
+    </RelativeLayout>
+
+    <View android:id="@+id/line_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0.1dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/separator_line"
+        android:layout_below="@+id/header_title_layout"
+        />
+</RelativeLayout>
