@@ -42,7 +42,7 @@ public class HWHttpRequest {
         if (HWCommon.isLogined()){
             GxUser user = HWCommon.getLoginUser();
             params.put("user_id" , user.getId());
-            params.put("token",user.getToken());
+            params.put("token","fd1642800dd620dcb5508b781bdce45b");
         }else{
             params.put("user_id" , "");
             params.put("token","");

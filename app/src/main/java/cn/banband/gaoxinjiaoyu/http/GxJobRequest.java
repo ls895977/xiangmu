@@ -10,6 +10,7 @@ import org.json.JSONObject;
 
 import java.util.List;
 
+import cn.banband.gaoxinjiaoyu.activity.DataDownLoaBean;
 import cn.banband.global.HWCommon;
 import cn.banband.global.http.HWFailuredListener;
 import cn.banband.global.http.HWHttpRequest;
@@ -88,17 +89,14 @@ public class GxJobRequest {
         HWHttpRequest.post("Material/materialList", params, new HWJsonHttpResponseHandler(successListener, failuredListener) {
 
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                Log.e("aa","-----------11--"+response.toString());
                 try {
                     String msg = (String) response.get(HWCommon.response_msg);
                     int status = (int) response.get(HWCommon.response_status);
-                    Log.e("aa","-----------222--"+msg);
-
                     if (status == 1) {
-                        List<GxRecruit> recruits = null;
+                        List<DataDownLoaBean> recruits = null;
                         JSONArray _list = response.getJSONArray(HWCommon.response_result);
                         if (_list != null) {
-                            recruits = HWJsonUtil.fromJsonArrayToList(_list, GxRecruit.class);
+                            recruits = HWJsonUtil.fromJsonArrayToList(_list, DataDownLoaBean.class);
                             successListener.onRespone(msg, recruits);
                         } else {
                             successListener.onRespone(msg, 0);

@@ -6,6 +6,15 @@ public class DataDownLoaBean implements HWModel {
     private int id;
     private String title;
     private String file;
+    private int createtime;
+
+    public int getCreatetime() {
+        return createtime;
+    }
+
+    public void setCreatetime(int createtime) {
+        this.createtime = createtime;
+    }
 
     public int getId() {
         return id;
