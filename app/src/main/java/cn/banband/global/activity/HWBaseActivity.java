@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import cn.banband.gaoxinjiaoyu.R;
@@ -18,9 +20,11 @@ public abstract class HWBaseActivity extends Activity {
     private onRight onRight;
     TextView txtv_title;
     ImageView backImgv, Img_right;
+    private RelativeLayout rltitle;
     boolean commonHeaderEnabled = false;
     String title;
-    int imge=0;
+    int imge = 0;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +37,7 @@ public abstract class HWBaseActivity extends Activity {
         if (commonHeaderEnabled) {
             getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.header_common);
             txtv_title = findViewById(R.id.header_title_txtv);
+            rltitle = findViewById(R.id.header_title_title);
             backImgv = findViewById(R.id.header_title_back_imgv);
             Img_right = findViewById(R.id.header_title_right);
             txtv_title.setText(title);
@@ -43,7 +48,7 @@ public abstract class HWBaseActivity extends Activity {
                 }
             });
         }
-        if(imge!=0){
+        if (imge != 0) {
             Img_right.setImageResource(imge);
             Img_right.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -68,13 +73,19 @@ public abstract class HWBaseActivity extends Activity {
         commonHeaderEnabled = true;
         this.title = title;
     }
-    public void addCommonHeader(String title,int imge,onRight onRight1) {
-        this.onRight=onRight1;
-        this.imge=imge;
+
+    public void addCommonHeader(String title, int imge, onRight onRight1) {
+        this.onRight = onRight1;
+        this.imge = imge;
         commonHeaderEnabled = true;
         this.title = title;
     }
-   public interface onRight{
+
+    public interface onRight {
         void onRightBt();
+    }
+
+    public void hid() {
+        rltitle.setVisibility(View.GONE);
     }
 }

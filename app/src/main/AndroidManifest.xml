@@ -22,6 +22,9 @@
         <activity android:name=".activity.JobRecruitListActivity_" />
         <activity android:name=".activity.JobRecruitDetailActivity_"  />
         <activity android:name=".model.datadownload.Act_DataDownload"  />
+        <activity android:name=".model.datadownload.Act_Download_details"  />
+        <activity android:name=".model.datadownload.Act_Download_Search"  />
+        <activity android:name=".model.careerquiz.Act_Career_Quiz"  />
     </application>
 
 </manifest>

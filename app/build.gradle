@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
     defaultConfig {
         applicationId "cn.banband.gaoxinjiaoyu"
         minSdkVersion 21
@@ -21,7 +21,6 @@ android {
 dependencies {
     annotationProcessor "org.androidannotations:androidannotations:4.4.0"
     implementation 'org.androidannotations:androidannotations-api:4.4.0'
-
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:27.1.1'

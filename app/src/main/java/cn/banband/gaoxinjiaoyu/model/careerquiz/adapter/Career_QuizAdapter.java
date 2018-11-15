@@ -1,8 +1,7 @@
-package cn.banband.gaoxinjiaoyu.model.datadownload.adapter;
+package cn.banband.gaoxinjiaoyu.model.careerquiz.adapter;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,18 +16,19 @@ import java.util.Locale;
 
 import cn.banband.gaoxinjiaoyu.R;
 import cn.banband.gaoxinjiaoyu.activity.DataDownLoaBean;
+import cn.banband.gaoxinjiaoyu.model.careerquiz.CareerQuizBean;
 
-public class DataDownloadAdapter extends BaseAdapter {
+public class Career_QuizAdapter extends BaseAdapter {
 
     private Context context;
-    List<DataDownLoaBean> data;
+    List<CareerQuizBean> data;
     private OnBackItem onBackItem;
 
     public void setOnBackItem(OnBackItem onBackItem) {
         this.onBackItem = onBackItem;
     }
 
-    public DataDownloadAdapter(Context context, List<DataDownLoaBean> data1) {
+    public Career_QuizAdapter(Context context, List<CareerQuizBean> data1) {
         this.context = context;
         this.data = data1;
 
@@ -54,17 +54,32 @@ public class DataDownloadAdapter extends BaseAdapter {
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
-            convertView = LayoutInflater.from(context).inflate(R.layout.item_datadownload, parent, false);
+            convertView = LayoutInflater.from(context).inflate(R.layout.item_careerquiz, parent, false);
             holder = new ViewHolder(convertView);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-        DataDownLoaBean bean = data.get(position);
-        holder.title.setText(bean.getTitle());
-        holder.date.setText("日期：" + ms2DateOnlyDay(bean.getCreatetime()));
-        holder.num.setText("下载次数：" + bean.getDownloads() + "次");
-        holder.money.setText("¥" + position);
+        Drawable drawable1 = context.getResources().getDrawable(R.drawable.tvboder3);
+        Drawable drawable2 = context.getResources().getDrawable(R.drawable.tvboder4);
+        Drawable drawable3 = context.getResources().getDrawable(R.drawable.tvboder5);
+        CareerQuizBean bean = data.get(position);
+        switch (bean.getStatus()) {
+            case 0://未开始
+                holder.stauts.setText("未开始");
+                holder.stauts.setBackground(drawable3);
+                break;
+            case 1://答题中
+                holder.stauts.setText("测试中");
+                holder.stauts.setBackground(drawable2);
+                break;
+            case 2://已提交
+                holder.stauts.setText("已完成");
+                holder.stauts.setBackground(drawable1);
+                break;
+        }
+        holder.title.setText(bean.getName());
+        holder.date.setText(ms2DateOnlyDay(bean.getCreatetime()));
         holder.item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -75,15 +90,15 @@ public class DataDownloadAdapter extends BaseAdapter {
     }
 
     public class ViewHolder {
-        private TextView title, date, num, money;
+        private TextView title, stauts, date, num;
         private LinearLayout item;
 
         public ViewHolder(View itemView) {
-            title = itemView.findViewById(R.id.item_DataDownload_title);
-            date = itemView.findViewById(R.id.item_datadownload_date);
-            num = itemView.findViewById(R.id.item_datadownload_num);
-            money = itemView.findViewById(R.id.item_datadownload_money);
-            item = itemView.findViewById(R.id.item_datadownload_all);
+            title = itemView.findViewById(R.id.item_careerquiz_title);
+            stauts = itemView.findViewById(R.id.item_careerquiz_staus);
+            date = itemView.findViewById(R.id.item_careerquiz_date);
+            num = itemView.findViewById(R.id.item_careerquiz_num);
+            item = itemView.findViewById(R.id.item_careerquiz_all);
         }
     }
 

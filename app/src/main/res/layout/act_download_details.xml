@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dip"
+        android:text="装配型企业在仓库管理中推进"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingLeft="10dip">
+
+        <TextView
+            android:id="@+id/item_datadownload_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="日期：2018-5-30"
+            android:textColor="#c0beb9"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/item_datadownload_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:layout_toRightOf="@+id/item_datadownload_date"
+            android:text="下载次数：10次"
+            android:textColor="#c0beb9"
+            android:textSize="8sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="10dip"
+        android:paddingLeft="10dip"
+        android:text="¥3.0"
+        android:textColor="#ff0000" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="5dip"
+        android:background="#f0f0f0" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/icon_book"
+        android:drawablePadding="5dip"
+        android:padding="10dip"
+        android:text="介绍" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="#f0f0f0" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:text="消费保障中国，消费保障中国，消费保障中国，消费保障中国，消费保障中国，消费保障中国，消费保障中国，消费保障中国，" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="10dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tvboder"
+            android:drawableLeft="@mipmap/icon_phone"
+            android:drawablePadding="5dip"
+            android:paddingBottom="10dip"
+            android:paddingLeft="40dip"
+            android:paddingRight="40dip"
+            android:paddingTop="10dip"
+            android:text="在经咨询"
+            android:textColor="#e59d48" />
+
+        <TextView
+            android:id="@+id/Download_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:background="@drawable/tvboder1"
+            android:drawablePadding="5dip"
+            android:paddingBottom="10dip"
+            android:paddingLeft="50dip"
+            android:paddingRight="50dip"
+            android:paddingTop="10dip"
+            android:text="点击下载"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>

@@ -28,7 +28,7 @@
                 android:drawablePadding="5dip"
                 android:drawableRight="@drawable/check_selected"
                 android:gravity="center_horizontal"
-                android:text="全部下载" />
+                android:text="HR一级" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -49,7 +49,7 @@
                 android:drawablePadding="5dip"
                 android:drawableRight="@drawable/check_selected"
                 android:gravity="center_horizontal"
-                android:text="上传时间" />
+                android:text="综合排序" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -70,7 +70,7 @@
                 android:drawablePadding="5dip"
                 android:drawableRight="@drawable/check_selected"
                 android:gravity="center_horizontal"
-                android:text="下载次数" />
+                android:text="筛选" />
         </RelativeLayout>
     </LinearLayout>
 

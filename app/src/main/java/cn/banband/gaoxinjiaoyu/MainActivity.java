@@ -10,6 +10,7 @@ import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
 import cn.banband.gaoxinjiaoyu.activity.JobRecruitListActivity_;
+import cn.banband.gaoxinjiaoyu.model.careerquiz.Act_Career_Quiz;
 import cn.banband.gaoxinjiaoyu.model.datadownload.Act_DataDownload;
 import cn.banband.global.activity.HWBaseMainActivity;
 
@@ -20,7 +21,8 @@ public class MainActivity extends HWBaseMainActivity implements View.OnClickList
     public Button button;
     @ViewById(R.id.button3)
     public Button button1;
-
+    @ViewById(R.id.button4)
+    public Button button2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +47,7 @@ public class MainActivity extends HWBaseMainActivity implements View.OnClickList
     public void initEvent() {
         button.setOnClickListener(this);
         button1.setOnClickListener(this);
+        button2.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
@@ -55,6 +58,9 @@ public class MainActivity extends HWBaseMainActivity implements View.OnClickList
                 break;
             case R.id.button3://资料下载
                 startActivity(new Intent(this, Act_DataDownload.class));
+                break;
+            case R.id.button4://职业测评
+                startActivity(new Intent(this, Act_Career_Quiz.class));
                 break;
         }
 

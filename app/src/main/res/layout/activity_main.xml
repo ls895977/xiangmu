@@ -24,6 +24,10 @@
         android:text="资料下载"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-
+    <Button
+        android:id="@+id/button4"
+        android:text="职业测评"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
